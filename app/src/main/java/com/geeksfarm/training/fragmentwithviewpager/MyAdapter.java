@@ -12,15 +12,24 @@ public class MyAdapter extends FragmentStatePagerAdapter {
 
     private static ArrayList<String> myTitles;
     private static ArrayList<String> myData;
+    private static ArrayList<MenuMakanan> myFoodMenu; // Buat ArrayList dengan Tipe data object (MenuMAkanan)= merupakan class
 
 
     private static int numOfItems;
 
-    public static MyAdapter newInstance(FragmentManager fragmentManager, ArrayList<String> titles,ArrayList<String> data){
+    public static MyAdapter newInstance(FragmentManager fragmentManager, ArrayList<String> titles,ArrayList<String> data){ //3 parameter
         MyAdapter myAdapter = new MyAdapter(fragmentManager);
         myTitles = titles;
         myData = data;
         numOfItems = data.size(); // set numOfItems as size of data or titles
+        return myAdapter;
+    }
+
+    // Overload newInstance() above
+    public static MyAdapter newInstance(FragmentManager fragmentManager, ArrayList<MenuMakanan> kumpulanMenuMakanan){ // menjadi 2 parameter
+        MyAdapter myAdapter = new MyAdapter(fragmentManager);
+        myFoodMenu = kumpulanMenuMakanan;
+        numOfItems = kumpulanMenuMakanan.size();
         return myAdapter;
     }
 
@@ -35,7 +44,7 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) { //function
-        String text = myData.get(position);
+        String text = myFoodMenu.get(position).getData(); // ambil dari getData Di class MenuMaknan
 
         //FirstFragment firstFragment = new FirstFragment();
         FirstFragment firstFragment = FirstFragment.newInstance(text); //call newInstance()
@@ -52,7 +61,7 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        String title = myTitles.get(position);
+        String title = myFoodMenu.get(position).getNamaMenu(); //berubah jadi object MenuMakanan menu.getNamaMenu() dari class MenuMakanan
         return title;
 
     }
