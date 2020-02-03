@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> menuTitleData = new ArrayList<>();
     ArrayList<String> data = new ArrayList<>();
 
+    ArrayList<MenuMakanan> kumpulanMenuMakanan = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
