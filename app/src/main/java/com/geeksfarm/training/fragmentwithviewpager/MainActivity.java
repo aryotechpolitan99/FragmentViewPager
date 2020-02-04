@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         menuTitleData.add("A La Carte");
         menuTitleData.add("Paket Hemat");
         menuTitleData.add("Ayam");
-        menuTitleData.add("Makanan");
+        menuTitleData.add("MakananAdapter");
         menuTitleData.add("Minuman");
 
     }
@@ -63,15 +63,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void generateMenu(){
-        kumpulanMenuMakanan.add(new MenuMakanan("Promo","Data 1" ));
+        /*kumpulanMenuMakanan.add(new MenuMakanan("Promo","Data 1" ));
         kumpulanMenuMakanan.add(new MenuMakanan("Discount","Data 2" ));
         kumpulanMenuMakanan.add(new MenuMakanan("Hemat","Data 3" ));
         kumpulanMenuMakanan.add(new MenuMakanan("Cashback","Data 4" ));
         kumpulanMenuMakanan.add(new MenuMakanan("Serba 10k","Data 5" ));
         kumpulanMenuMakanan.add(new MenuMakanan("Istimewa","Data 6" ));
+         */
+
+        ArrayList<MenuMakanan.Makanan> menuPromo = new ArrayList<>();
+        menuPromo.add(new MenuMakanan.Makanan("Bakso", "5.000"));
+        menuPromo.add(new MenuMakanan.Makanan("Mie Ayam", "5.000"));
+        menuPromo.add(new MenuMakanan.Makanan("Seblak", "5.000"));
+
+        kumpulanMenuMakanan.add(new MenuMakanan("Promo", menuPromo));
+
+        ArrayList<MenuMakanan.Makanan> serbasepuluh = new ArrayList<>();
+        serbasepuluh.add(new MenuMakanan.Makanan("Soto", "10.000"));
+        serbasepuluh.add(new MenuMakanan.Makanan("Sop", "10.000"));
+        serbasepuluh.add(new MenuMakanan.Makanan("Tongseng", "10.000"));
+
+        kumpulanMenuMakanan.add(new MenuMakanan("Hemat", serbasepuluh));
+
+        ArrayList<MenuMakanan.Makanan> istimewa = new ArrayList<>();
+        istimewa.add(new MenuMakanan.Makanan("Nasi Goreng Nusantara","35.000"));
+        istimewa.add(new MenuMakanan.Makanan("Gado - Gado Gaul","40.000"));
+        istimewa.add(new MenuMakanan.Makanan("Gurame Bakar gosong","45.000"));
+        istimewa.add(new MenuMakanan.Makanan("Ayam Bakar Kampungan","55.000"));
+
+        kumpulanMenuMakanan.add(new MenuMakanan("Istimewa", istimewa));
 
     }
-
-
 
 }

@@ -44,10 +44,13 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) { //function
-        String text = myFoodMenu.get(position).getData(); // ambil dari getData Di class MenuMaknan
+       // String text = myFoodMenu.get(position).getData(); // ambil dari getData Di class MenuMaknan
 
         //FirstFragment firstFragment = new FirstFragment();
-        FirstFragment firstFragment = FirstFragment.newInstance(text); //call newInstance()
+        FirstFragment firstFragment = null;
+
+        firstFragment = new FirstFragment();
+        firstFragment.setData(myFoodMenu.get(position).getData());
 
         return firstFragment;
 
