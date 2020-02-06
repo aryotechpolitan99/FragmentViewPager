@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">FragmentWithViewPager</string>
+    <string name="app_name">Ayo Makan</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descrip_baso">Bakso Makyus berisi 5 butir bakso dengan daging asli, daun sawi ,toge, bihun dan mie yang menggugah selera</string>
 </resources>

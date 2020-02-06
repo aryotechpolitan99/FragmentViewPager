@@ -1,6 +1,7 @@
 package com.geeksfarm.training.fragmentwithviewpager;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -36,6 +38,20 @@ public class FirstFragment extends Fragment {
         // Required empty public constructor
     }
 
+    // 4.1 Buat fungsi OnItemClickListener
+    public void lvClick(){
+        lvMenumakanan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //4.2 pindah Activity dengan Intent
+                Intent intent = new Intent(getActivity(),DescripActivity.class);
+                intent.putExtra("DescMenu",AdapterMakanan.getItem(position));
+                startActivity(intent);
+            }
+        });
+    }
+
     private TextView textData;
 
     @Override
@@ -49,6 +65,9 @@ public class FirstFragment extends Fragment {
         lvMenumakanan = rootView.findViewById(R.id.lv_firstfragment);
 
         lvMenumakanan.setAdapter(AdapterMakanan);
+
+        //4.3 panggil fungsi onItemClick
+        lvClick();
 
         return rootView;
 

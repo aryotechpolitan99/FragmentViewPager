@@ -24,7 +24,9 @@ public class MakananAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    //3.panggil objek MenuMakanan.Makanan
+    public MenuMakanan.Makanan getItem(int position) {
+        MenuMakanan.Makanan food = daftar.get(position);
         return daftar.get(position);
     }
 

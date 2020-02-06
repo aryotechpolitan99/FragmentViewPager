@@ -72,26 +72,27 @@ public class MainActivity extends AppCompatActivity {
          */
 
         ArrayList<MenuMakanan.Makanan> menuPromo = new ArrayList<>();
-        menuPromo.add(new MenuMakanan.Makanan("Bakso", "5.000"));
-        menuPromo.add(new MenuMakanan.Makanan("Mie Ayam", "5.000"));
-        menuPromo.add(new MenuMakanan.Makanan("Seblak", "5.000"));
+        // 5. Ambil data tambahan dari descrip yang telah dibuat "image,descripsi dan judulmakanan"
+        menuPromo.add(new MenuMakanan.Makanan("Bakso", "5.000",R.drawable.baso, getResources().getString(R.string.descrip_baso),"Bakso Maknyus"));
+        //menuPromo.add(new MenuMakanan.Makanan("Mie Ayam", "5.000"));
+        //menuPromo.add(new MenuMakanan.Makanan("Seblak", "5.000"));
 
         kumpulanMenuMakanan.add(new MenuMakanan("Promo", menuPromo));
 
-        ArrayList<MenuMakanan.Makanan> serbasepuluh = new ArrayList<>();
-        serbasepuluh.add(new MenuMakanan.Makanan("Soto", "10.000"));
-        serbasepuluh.add(new MenuMakanan.Makanan("Sop", "10.000"));
-        serbasepuluh.add(new MenuMakanan.Makanan("Tongseng", "10.000"));
+       // ArrayList<MenuMakanan.Makanan> serbasepuluh = new ArrayList<>();
+        //serbasepuluh.add(new MenuMakanan.Makanan("Soto", "10.000"));
+       // serbasepuluh.add(new MenuMakanan.Makanan("Sop", "10.000"));
+       // serbasepuluh.add(new MenuMakanan.Makanan("Tongseng", "10.000"));
 
-        kumpulanMenuMakanan.add(new MenuMakanan("Hemat", serbasepuluh));
+        //kumpulanMenuMakanan.add(new MenuMakanan("Hemat", serbasepuluh));
 
-        ArrayList<MenuMakanan.Makanan> istimewa = new ArrayList<>();
-        istimewa.add(new MenuMakanan.Makanan("Nasi Goreng Nusantara","35.000"));
-        istimewa.add(new MenuMakanan.Makanan("Gado - Gado Gaul","40.000"));
-        istimewa.add(new MenuMakanan.Makanan("Gurame Bakar gosong","45.000"));
-        istimewa.add(new MenuMakanan.Makanan("Ayam Bakar Kampungan","55.000"));
+       // ArrayList<MenuMakanan.Makanan> istimewa = new ArrayList<>();
+       // istimewa.add(new MenuMakanan.Makanan("Nasi Goreng Nusantara","35.000"));
+        //istimewa.add(new MenuMakanan.Makanan("Gado - Gado Gaul","40.000"));
+        //istimewa.add(new MenuMakanan.Makanan("Gurame Bakar gosong","45.000"));
+        //istimewa.add(new MenuMakanan.Makanan("Ayam Bakar Kampungan","55.000"));
 
-        kumpulanMenuMakanan.add(new MenuMakanan("Istimewa", istimewa));
+       //kumpulanMenuMakanan.add(new MenuMakanan("Istimewa", istimewa));
 
     }
 
