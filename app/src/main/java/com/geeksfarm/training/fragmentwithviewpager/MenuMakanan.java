@@ -18,9 +18,8 @@ public class MenuMakanan {
         private String judulMakanan;
 
 
-
         // 1.2 tambah parameter image, deskripsi dan judul makanan
-        public Makanan(String nm, String price, Integer image, String deskripsi, String judulmakanan){
+        public Makanan(String nm, String price, Integer image, String deskripsi, String judulmakanan) {
             this.nama = nm;
             this.harga = price;
             this.image = image;
@@ -35,6 +34,7 @@ public class MenuMakanan {
         public String getHarga() {
             return harga;
         }
+
         public Integer getImage() {
             return image;
         }
@@ -42,6 +42,7 @@ public class MenuMakanan {
         public String getDescripsi() {
             return descripsi;
         }
+
         public String getJudulMakanan() {
             return judulMakanan;
         }

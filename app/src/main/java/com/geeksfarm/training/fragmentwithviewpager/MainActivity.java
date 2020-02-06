@@ -1,9 +1,6 @@
 package com.geeksfarm.training.fragmentwithviewpager;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -74,25 +71,25 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<MenuMakanan.Makanan> menuPromo = new ArrayList<>();
         // 5. Ambil data tambahan dari descrip yang telah dibuat "image,descripsi dan judulmakanan"
         menuPromo.add(new MenuMakanan.Makanan("Bakso", "5.000",R.drawable.baso, getResources().getString(R.string.descrip_baso),"Bakso Maknyus"));
-        //menuPromo.add(new MenuMakanan.Makanan("Mie Ayam", "5.000"));
-        //menuPromo.add(new MenuMakanan.Makanan("Seblak", "5.000"));
+        menuPromo.add(new MenuMakanan.Makanan("Mie Ayam", "5.000",R.drawable.mieayam, getResources().getString(R.string.descrip_mieayam),"Mie Ayam Maknyus"));
+        menuPromo.add(new MenuMakanan.Makanan("Seblak", "5.000", R.drawable.seblak, getResources().getString(R.string.descrip_seblak),"Seblak Gaul"));
 
         kumpulanMenuMakanan.add(new MenuMakanan("Promo", menuPromo));
 
-       // ArrayList<MenuMakanan.Makanan> serbasepuluh = new ArrayList<>();
-        //serbasepuluh.add(new MenuMakanan.Makanan("Soto", "10.000"));
-       // serbasepuluh.add(new MenuMakanan.Makanan("Sop", "10.000"));
-       // serbasepuluh.add(new MenuMakanan.Makanan("Tongseng", "10.000"));
+        ArrayList<MenuMakanan.Makanan> serbasepuluh = new ArrayList<>();
+        serbasepuluh.add(new MenuMakanan.Makanan("Soto", "10.000", R.drawable.sotoayam, getResources().getString(R.string.descrip_soto),"Soto Ayam"));
+        serbasepuluh.add(new MenuMakanan.Makanan("Sop", "10.000", R.drawable.sopayam, getResources().getString(R.string.descrip_sop),"Sop Ayam"));
+        serbasepuluh.add(new MenuMakanan.Makanan("Tongseng", "10.000", R.drawable.tongseng, getResources().getString(R.string.descrip_tongseng),"Tongseng"));
 
-        //kumpulanMenuMakanan.add(new MenuMakanan("Hemat", serbasepuluh));
+        kumpulanMenuMakanan.add(new MenuMakanan("Hemat", serbasepuluh));
 
-       // ArrayList<MenuMakanan.Makanan> istimewa = new ArrayList<>();
-       // istimewa.add(new MenuMakanan.Makanan("Nasi Goreng Nusantara","35.000"));
-        //istimewa.add(new MenuMakanan.Makanan("Gado - Gado Gaul","40.000"));
-        //istimewa.add(new MenuMakanan.Makanan("Gurame Bakar gosong","45.000"));
-        //istimewa.add(new MenuMakanan.Makanan("Ayam Bakar Kampungan","55.000"));
+        ArrayList<MenuMakanan.Makanan> istimewa = new ArrayList<>();
+        istimewa.add(new MenuMakanan.Makanan("Nasi Goreng Nusantara","35.000", R.drawable.nasigoreng, getResources().getString(R.string.descrip_nasgor), "Nasi Goreng Istimewa"));
+        istimewa.add(new MenuMakanan.Makanan("Gado - Gado Gaul","40.000", R.drawable.gadogado, getResources().getString(R.string.descrip_gado), "Gado - Gado Gaul"));
+        istimewa.add(new MenuMakanan.Makanan("Gurame Bakar gosong","45.000", R.drawable.guramebakar, getResources().getString(R.string.descrip_gurame), "Gurame Bakar Gosong"));
+        istimewa.add(new MenuMakanan.Makanan("Ayam Bakar Kampungan","55.000", R.drawable.ayambakar, getResources().getString(R.string.descrip_ayambakar), "Ayam Bakar Kampungan"));
 
-       //kumpulanMenuMakanan.add(new MenuMakanan("Istimewa", istimewa));
+        kumpulanMenuMakanan.add(new MenuMakanan("Istimewa", istimewa));
 
     }
 
